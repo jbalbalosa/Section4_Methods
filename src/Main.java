@@ -6,56 +6,19 @@ public class Main {
         System.out.println("-- Code Blocks                         --");
         System.out.println("-----------------------------------------");
 
-        /*
-        boolean gameOver = true;
-        int score = 800;
-        int levelCompleted = 5;
-        int bonus = 100;
-        */
-
-        /*
-        if (score < 5000 && score > 1000) {
-            System.out.println("Your score was less than 5000 but greater than 1000");
-        } else if (score < 1000){
-            System.out.println("You score was less than 1000");
-        } else {
-            System.out.println("Got here");
-        }*/
-
-        /*
-            if (gameOver){
-            int finalScore = score + (levelCompleted * bonus);
-            System.out.println("Game Over");
-            System.out.println("Your final score was " + finalScore);
-        }*/
         calculateScore(true, 800,5,100);
-        calculateScore(true,10000,8,200);
-
-        //--------------------------------------------------------------------
-        /*System.out.println("Second Game!");
-        score = 10000;
-        levelCompleted = 8;
-        bonus = 200;
-
-        if (gameOver){
-            int finalScore = score + (levelCompleted * bonus);
-            System.out.println("Game Over");
-            System.out.println("Your second final score was " + finalScore);
-        }*/
-        //--------------------------------------------------------------------
+        calculateScore(false,10000,8,200);
     }
 
-    public static void calculateScore(boolean gameOver, int score, int levelCompleted, int bonus){
-     /* boolean gameOver = true;
-        int score = 800;
-        int levelCompleted = 5;
-        int bonus = 100;
-     */
+    //public static void calculateScore(boolean gameOver, int score, int levelCompleted, int bonus){
+    public static int calculateScore(boolean gameOver, int score, int levelCompleted, int bonus){
+        int finalScore = -1;
         if (gameOver){
-            int finalScore = score + (levelCompleted * bonus);
+            finalScore = score + (levelCompleted * bonus);
             finalScore +=1000;
             System.out.println("Game Over");
             System.out.println("Your final score was " + finalScore);
         }
+        return finalScore;
     }
 }
